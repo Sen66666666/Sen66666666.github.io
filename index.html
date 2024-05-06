@@ -33,33 +33,6 @@
 </head>
 
 <body>
-	<script>
-		
-    document.addEventListener("DOMContentLoaded", function() {
-        const retryLimit = 2;
-        const images = document.querySelectorAll('img');
-        images.forEach(img => {
-            let retryCount = 0;
-            img.addEventListener('error', function handleLoadError() {
-                if (retryCount < retryLimit) {
-                    console.log(`Retrying loading image: ${img.src}`);
-                    // Modify the src to force the browser to retry loading the image
-                    const src = img.src;
-                    img.src = "";
-                    img.src = src;
-                    retryCount++;
-                } else {
-                    console.log(`Failed to load image after ${retryLimit} attempts: ${img.src}`);
-                    img.removeEventListener('error', handleLoadError); // Remove event listener if limit is reached
-                }
-            });
-        });
-    });
-</script>
-
-
-
-
 	<div id="wrapper">
 		<div class="page-overlay">
 			<div class="preloader-wrap">
