@@ -1223,6 +1223,27 @@
 	<script src="static/js/jquery.countdown.js"></script>
 	<script src="static/js/designesia.js"></script>
 	<script>
+		$(document).ready(function() {
+			// Function to reload page after 10 seconds
+			var pageLoadTimeout = setTimeout(function() {
+				alert('Loading is taking too long, refreshing the page.');
+				window.location.reload(true);
+			}, 10000);  // 10000 milliseconds = 10 seconds
+		
+			// If everything loads fine before timeout, clear the timeout
+			$(window).on('load', function() {
+				clearTimeout(pageLoadTimeout);
+			});
+		
+			$('a[data-filter=".illustration"]').on('click', function(e) {
+				e.preventDefault();  
+				$('html, body').animate({
+					scrollTop: $('#uav-simulation').offset().top
+				}, 1000);  
+			});
+		});
+	</script>
+	<script>
 	$(document).ready(function() {
 		
 		$('a[data-filter=".illustration"]').on('click', function(e) {
