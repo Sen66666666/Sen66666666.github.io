@@ -853,8 +853,37 @@
 						</div>
 					</div>
 
+                    <div class="row">
+						<div class="col-lg-4 col-md-6 mb30">
+							<div class="bloglist item">
+								<div class="post-content">
+									<div class="post-image">
+										<!-- 添加 target="_blank" 属性，使链接在新标签页中打开 -->
+										<a href="https://youtube.com/shorts/Q1VJLt93jkk?feature=share" class="gallery-item pf-click" target="_blank">
+											<div class="picframe wow">
+												<span class="overlay">
+													<span class="pf_text">
+														<span class="project-name">View</span>
+													</span>
+												</span>
+												<img src="sen/elisa3.jpg" alt="ELISA-3 ROBOT" />
+											</div>
+										</a>
+									</div>
+									<div class="post-text">
+										<h4><a href="#">ELISA-3 ROBOT</a></h4>
+										<p>During my undergraduate course, the implementation of various movements of the Elisa-3 robot was based on the code of the Arduino platform. These movements included tracking, obstacle avoidance, and route planning.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
-					<div class="row">
+
+
+
+
+					<!--<div class="row">
 						<div class="col-lg-4 col-md-6 mb30">
 							<div class="bloglist item">
 								<div class="post-content">
@@ -876,7 +905,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div>-->
 
 						<div class="col-lg-4 col-md-6 mb30">
 							<div class="bloglist item">
@@ -1222,27 +1251,6 @@
 	<script src="static/js/jquery.countto.js"></script>
 	<script src="static/js/jquery.countdown.js"></script>
 	<script src="static/js/designesia.js"></script>
-	<script>
-		$(document).ready(function() {
-			// Function to reload page after 10 seconds
-			var pageLoadTimeout = setTimeout(function() {
-				alert('Loading is taking too long, refreshing the page.');
-				window.location.reload(true);
-			}, 10000);  // 10000 milliseconds = 10 seconds
-		
-			// If everything loads fine before timeout, clear the timeout
-			$(window).on('load', function() {
-				clearTimeout(pageLoadTimeout);
-			});
-		
-			$('a[data-filter=".illustration"]').on('click', function(e) {
-				e.preventDefault();  
-				$('html, body').animate({
-					scrollTop: $('#uav-simulation').offset().top
-				}, 1000);  
-			});
-		});
-	</script>
 	<script>
 	$(document).ready(function() {
 		
